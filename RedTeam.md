@@ -57,16 +57,16 @@ $ wpscan --url http://192.168.1.110/wordpress -eu
      - **Exploit Used**
        - This flag was found in /var/www/html
        - `cat service.html`
-       - ![](FinalProjectImages/htmldirectory.png)
-       - ![](FinalProjectImages/flag1.png)
        
    - `flag2.txt`: {fc3fd58dcdad9ab23faca6e9a36e581c}
      - **Exploit Used**
        - This flag was found in /var/www/
        - `cat flag2.txt`
 
-![](FinalProjectImages/catflag2.png)
-
+ ![](FinalProjectImages/htmldirectory.png)
+ ![](FinalProjectImages/flag1.png)
+ ![](FinalProjectImages/catflag2.png)
+      
 - From the /var/www/html/ directory `cd wordpress` to find the `wp-config.php` file
  - This is where the MySQL username and password is located. 
  - Use the found username: root and password: R@v3nSecurity
