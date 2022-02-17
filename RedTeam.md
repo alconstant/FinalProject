@@ -69,6 +69,9 @@ $ wpscan --url http://192.168.1.110/wordpress -eu
       
 - From the /var/www/html/ directory `cd wordpress` to find the `wp-config.php` file
  - This is where the MySQL username and password is located. 
+ 
+  ![](FinalProjectImages/wpconfig.png)
+  
  - Use the found username: root and password: R@v3nSecurity
  - Inside mysql, the following commands lead to password hashes and a flag3.txt
   ``` bash
