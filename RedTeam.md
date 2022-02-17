@@ -11,8 +11,10 @@ Nmap scan results for each machine reveal the below services and OS details:
 
 ```bash
 $ nmap -sS -sV -O 192.168.1.110
-  # TODO: Insert scan output
 ```
+
+![](FinalProjectImages/nmapsSsVO.png)
+
 
 This scan identifies the services below as potential points of entry:
 - Target 1
@@ -38,25 +40,34 @@ The following vulnerabilities were identified on each target:
  - Enumerate the WordPress site using WPSCAN
 ```
 $ wpscan --url http://192.168.1.110/wordpress -eu 
-  # TODO: Insert screenshot
 ``` 
- - There are two users. Michael and Steven
-  #TODO: Insert screenshot
+![](FinalProjectImages/wpscan.png) 
 
- - Use the command ```ssh michael@192.168.1.110`` and the password 'michael' to gain access
-  #TODO: insert screenshot
+- There are two users. Michael and Steven
+
+![](FinalProjectImages/enumerateusers.png)
+
+ - Use the command ```ssh michael@192.168.1.110``` and the password 'michael' to gain access
+ 
+ ![](FinalProjectImages/sshmichael.png)
+ 
+ 
  - By traversing the directories two flags are exposed:
    - `flag1.txt`: {b9bbcb33e11b80be759c4e844862482d}
      - **Exploit Used**
        - This flag was found in /var/www/html
-       - #TODO insert screen shot of html directory
        - `cat service.html`
-       - #TODO insert screenshot of flag1.txt
+       - ![](FinalProjectImages/htmldirectory.png)
+       - ![](FinalProjectImages/flag1.png)
+       
    - `flag2.txt`: {fc3fd58dcdad9ab23faca6e9a36e581c}
      - **Exploit Used**
        - This flag was found in /var/www/
        - `cat flag2.txt`
- - From the /var/www/html/ directory `cd wordpress` to find the `wp-config.php` file
+
+![](FinalProjectImages/catflag2.png)
+
+- From the /var/www/html/ directory `cd wordpress` to find the `wp-config.php` file
  - This is where the MySQL username and password is located. 
  - Use the found username: root and password: R@v3nSecurity
  - Inside mysql, the following commands lead to password hashes and a flag3.txt
