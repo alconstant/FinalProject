@@ -79,7 +79,7 @@ $ wpscan --url http://192.168.1.110/wordpress -eu
      use wordpress;
      show tables;
      select * from wp_users;
-     #TODO: insert screenshot
+  
   ```
    - `flag3.txt`:{afc01ab56b50591e7dccf93122770cd2}
      - **Exploit Used**
